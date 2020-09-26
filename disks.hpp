@@ -97,14 +97,14 @@ public:
   bool is_initialized() const {
     // TODO: Write code for this function, including rewriting the return
     // statement, and then delete these comments.  
-      for(size_t i = 0; i < total_count(); i++){
+      for(size_t i = 0; i < total_count(); ++i){
 
           if(i % 2 == 0){
             //if the dark is at even locations
-            if(_colors[i] == 0){
+            if(_colors[i] == DISK_DARK){
               return false;
             }else{
-                if(_colors[i] == 1){
+                if(_colors[i] == DISK_LIGHT){
                     return false;
                 }
             }
@@ -118,14 +118,14 @@ public:
   // indices).
   bool is_sorted() const {
   
-    for(size_t i = 0; i < total_count(); i++){
+    for(size_t i = 0; i < total_count(); ++i){
 
         if(i < total_count() / 2){
 
-            if(_colors[i] == 1){
+            if(_colors[i] == DISK_LIGHT){
               return false;
             } else{
-              if(_colors[i] == 0){
+              if(_colors[i] == DISK_DARK){
                 return false;
               }
             }

@@ -1,4 +1,7 @@
-#Project 1
+#335 - Project 1
+#Alternating Disks: Lawnmower & alternating algorithm 
 
-Richard Vu
+Group members:
+
+Richard Vu  richarddvu@csu.fullerton.edu
 
