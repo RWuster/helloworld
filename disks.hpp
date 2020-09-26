@@ -167,11 +167,11 @@ sorted_disks sort_alternate(const disk_state& before) {
   disk_state after = before;
   unsigned swaps = 0;
 
-  for(size_t i = 0; i < before.light_count(); i++){
+  for(size_t i = 0; i < after.light_count(); i++){
 
-      for(size_t j = 0; j < before.total_count(); j++){
+      for(size_t j = 0; j < after.total_count(); j++){
 
-        if(before.get(j) > before.get(j + 1)){
+        if(after.get(j) > after.get(j + 1)){
             after.swap(j);
             swaps += 1;
         }
@@ -187,12 +187,12 @@ sorted_disks sort_lawnmower(const disk_state& before) {
   
    disk_state after = before;
    unsigned swaps = 0;
-   for(size_t i = 0; i < before.total_count(); i++){
+   for(size_t i = 0; i < after.total_count(); i++){
 
       //one loop for going left
-      for(size_t j = 0; j < before.total_count() - 1; j++){
+      for(size_t j = 0; j < after.total_count() - 1; j++){
 
-          if(before.get(j) > before.get(j + 1)){
+          if(after.get(j) > after.get(j + 1)){
               after.swap(j);
               swaps += 1;
 
@@ -200,9 +200,9 @@ sorted_disks sort_lawnmower(const disk_state& before) {
       }
 
       //second loop going right.
-      for(size_t k = before.total_count() - 1; k >= 1; k--){
+      for(size_t k = after.total_count() - 1; k >= 1; k--){
 
-          if(before.get(k) < before.get(k - 1)){
+          if(after.get(k) < after.get(k - 1)){
               after.swap(k);
               swaps+= 1;
           }
